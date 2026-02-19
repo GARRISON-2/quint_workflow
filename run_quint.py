@@ -13,7 +13,7 @@ out_dir = PROJ_ROOT
 
 class IMG_PACK():
     def __init__(self, image_path):
-        in_path = image_path
+        in_path = image_path 
         png_path = None
 
     def makePNGCopy(self, png_width = 1500, png_height=1000):
@@ -31,7 +31,7 @@ class IMG_PACK():
         self.png_path = png_path
 
 
-# set which image file type to seach for in the directory
+# set which image file type to search for in the directory
 file_type = "*.tif"
 
 # grab all files of file_type in chosen input directory
