@@ -62,7 +62,7 @@ class IMG_PACK():
         self.png_array = ds_array
 
 
-    def autoscale(self, channel, low=1, high=99, gamma=0.5):
+    def autoscale(self, channel, low=1, high=99, gamma=0.75):
         p_low = np.percentile(channel, low)
         p_high = np.percentile(channel, high)
         clipped = np.clip(channel, p_low, p_high)
@@ -87,11 +87,19 @@ output_dir = Path("S:/Anshutz/Cruz-Martin_Lab/projects/TBI_Project/quint_workflo
 
 # lookup table colors 
 lut_colors = [
-    [1,0,1],    #ch0000 - (DAPI)
+    [0,0,1],    #ch0000 - (DAPI)
     [0,1,0],    #ch0001 - (ATP1A1)
     [0,0,1],    #ch0002 - (18s)
-    [1,1,0]     #ch0003 - (alphasma)
+    [1,0,1]     #ch0003 - (alphasma)
 ]
+
+# QuPath Settings:
+# lut_colors = [
+#     [1,0,1],    #ch0000 - (DAPI)
+#     [0,1,0],    #ch0001 - (ATP1A1)
+#     [0,0,1],    #ch0002 - (18s)
+#     [1,1,0]     #ch0003 - (alphasma)
+# ]
 
 pks = []
 png_shape = (
