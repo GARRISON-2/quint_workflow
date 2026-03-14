@@ -1,1 +1,3 @@
-# quint_workflow
+Quint-based Atlas Alignment Workflow
+---
+

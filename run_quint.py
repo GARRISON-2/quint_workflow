@@ -1,11 +1,9 @@
 #import PyNutil 
 from pathlib import Path
 import subprocess
-from PIL import Image
 import gc
-
-
-Image.MAX_IMAGE_PIXELS = None
+import tifffile
+from PIL import Image
 
 # grab current working directory
 PROJ_ROOT = Path.cwd()
@@ -30,16 +28,6 @@ out_dir = PROJ_ROOT
 
 #     # grab all files of file_type in chosen input directory
 #     path_list = in_dir.rglob(file_type)
-
-
-# test on specific file
-path_list = [Path()]
-# check if big TIFF
-with open(path_list[0], "rb") as f:
-    print(f.read(4))
-
-img = Image.open(path_list[0])
-img.load()
 
 class IMG_PACK():
     def __init__(self, image_path):
